@@ -1,15 +1,47 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<!DOCTYPE html>
 <head>
-    <meta charset="utf-8">
+<!-- Basic Page Needs ================================================== -->
+	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+	<title>AB Shiddique- Fitness Trainer</title>
+	<meta name="description" content="AB Shiddique (Fitness Trainer) ">
+	<meta name="author" content="AB Shiddique">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <!-- Mobile Specific Metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <!-- Scripts -->
+    <!-- CSS
+	================================================== -->
+  	<link rel="stylesheet" href="{{ asset('css/zerogrid.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+	<!-- Custom Fonts -->
+    <link href="{{ asset('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+
+
+	<link rel="stylesheet" href="{{ asset('css/menu.css') }}">
+	<script src="{{ asset('js/jquery1111.min.js') }}" type="text/javascript"></script>
+	<script src="{{ asset('js/script.js') }}"></script>
+
+	<!-- Owl Carousel Assets -->
+    <link href="{{ asset('js/owl-carousel/owl.carousel.css') }}" rel="stylesheet">
+
+	<!--[if lt IE 8]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/Items/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        </a>
+      </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+		<script src="js/html5.js"></script>
+		<script src="js/css3-mediaqueries.js"></script>
+	<![endif]-->
+
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
@@ -18,10 +50,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        {{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -73,9 +106,9 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> --}}
 
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
     </div>

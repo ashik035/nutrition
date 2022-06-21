@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var sass = require("gulp-sass");
+const sass = require('gulp-sass')(require('sass'));
 watch = require('gulp-watch'),
 browserSync = require('browser-sync').create();
 
@@ -25,6 +25,7 @@ gulp.task('watch', function() {
             'resources/views/**/*.php',
             'resources/sass/*.scss',
             'resources/js/**/*.js',
+            'resources/js/*.js',
             'public/js/**/*.js',
             'public/css/**/*.css'
         ],
