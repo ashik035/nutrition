@@ -295,7 +295,7 @@
                     <div class="col-1-4 col-footer-1">
                         <div class="wrap-col">
                             <h3 class="widget-title">About Me</h3>
-                            <p>Professional & personal fitness trainer,to assist clients in all fitness levels to get into shape & achieve goal.  <br>I offer clients with customized meal plan,workout program,supplement guideline<br>& progress monitoring for achieving the perfect desired shape!
+                            <p>{{ $about_me }}</p>
                         </div>
                     </div>
                     <div class="col-1-4 col-footer-2">
@@ -347,7 +347,7 @@
             </div>
             <div class="copyright">
                 <div class="zerogrid wrapper">
-                    Copyright @ AB Shiddique Fitness - Designed by <a href="https://www.abshiddique.com">AB</a></a>
+                    Copyright @ AB Shiddique Fitness - Designed by <a href="/">AB</a></a>
                     <ul class="quick-link">
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Use</a></li>
