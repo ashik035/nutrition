@@ -30,25 +30,33 @@
             </div>
             <div id="cssmenu" class="t-left">
                 <ul>
-                    <li class="active"><a href="index.html"><span>How To Start</span></a></li>
-                    <li class="has-sub"><a href="#"><span>Program List</span></a>
+                    <li class="active"><a href="index.html"><span>Program</span></a>
                         <ul>
-                            <li class="has-sub"><a href="#"><span>Workout Plan</span></a>
-                            <ul>
-                                <li><a href="#"><span>Half-Yearly</span></a></li>
-                                <li class="last"><a href="#"><span>Yearly</span></a></li>
-                            </ul>
-                            </li>
-                            <li class="has-sub"><a href="#"><span>Meal Plan</span></a>
-                            <ul>
-                                <li><a href="#"><span>Half-Yearly</span></a></li>
-                                <li class="last"><a href="#"><span>Yearly</span></a></li>
-                            </ul>
+                            <li class="has-sub"><a href="/program/one-on-one"><span>One-on-One Training</span></a></li>
+                            <li class="has-sub"><a href="/program/online-fitness-coaching-for-general"><span>Online Fitness Coaching for General</span></a></li>
+                            <li class="has-sub"><a href="/program/PCOS"><span>PCOS(Poly-Cystic Ovarian Syndrome)</span></a></li>
+                            <li class="has-sub"><a href="/program/HDDA"><span>Heart Disease Diabetes Arthritis</span></a></li>
+                            <li class="has-sub"><a href="/program/exersize-and-diet"><span>Exersize and Diet For Older Adults</span></a></li>
+                            <li class="has-sub"><a href="/program/customize-diet-plan"><span>Customize Diet Plan</span></a></li>
+                            <li class="has-sub"><a href="/program/customize-workout-diet"><span>Customize Workout Diet</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub"><a href="#"><span>Online Live Group Class</span></a>
+                        <ul>
+                            <li class="has-sub"><a href="#"><span>3 Days In a Week</span></a>
                             </li>
                         </ul>
                     </li>
-                    <li><a href="index.html"><span>Progess Monitor</span></a></li>
-                    <li><a href="single.html"><span>About</span></a></li>
+                    <li><a href="index.html"><span>Shop</span></a>
+                        <ul>
+                            <li><a href="/shop/shop-all"><span>Shop All</span></a></li>
+                            <li><a href="#"><span>Accessories</span></a></li>
+                            <li class="last"><a href="#"><span>Apparel</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href=""><span>Reviews</span></a></li>
+                    <li><a href=""><span>Blog</span></a></li>
+                    <li><a href=""><span>About</span></a></li>
                     <li class="last"><a href="contact.html"><span>Contact</span></a></li>
                 </ul>
             </div>
