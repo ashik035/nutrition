@@ -61,18 +61,20 @@
                 </ul>
             </div>
             <div id="owl-slide" class="owl-carousel">
-                <div class="item">
-                    <img src="images/AB1.jpg" />
-                    <!-- Static Header -->
-                    <div class="header-text hidden-xs">
-                        <div class="col-md-12 text-left">
-                            <h1>START YOUR TRAINING <br>TODAY!</h1>
-                            <p>Professional & Personal Trainer</p>
-                            <a class="button" href="single.html">Let's Start!</a>
-                        </div>
-                    </div><!-- /header-text -->
-                </div>
-                <div class="item">
+                @foreach ($banners as $banner)
+                    <div class="item">
+                        <img src="{{ asset("storage/images/banner/$banner->image") }}" />
+                        <!-- Static Header -->
+                        <div class="header-text hidden-xs">
+                            <div class="col-md-12 text-left">
+                                <h1>{{ $banner->header }}</h1>
+                                <p>{{ $banner->sub_header }}</p>
+                                <a class="button" href="single.html">Let's Start!</a>
+                            </div>
+                        </div><!-- /header-text -->
+                    </div>
+                @endforeach
+                {{-- <div class="item">
                     <img src="images/AB3.jpg"  width=800 height=500 />
                     <!-- Static Header -->
                     <div class="header-text hidden-xs">
@@ -94,7 +96,7 @@
                         </div>
                     </div><!-- /header-text -->
 
-                </div>
+                </div> --}}
             </div>
         </header>
         <!--////////////////////////////////////Container-->
@@ -303,7 +305,7 @@
                     <div class="col-1-4 col-footer-1">
                         <div class="wrap-col">
                             <h3 class="widget-title">About Me</h3>
-                            <p>Professional & personal fitness trainer,to assist clients in all fitness levels to get into shape & achieve goal.  <br>I offer clients with customized meal plan,workout program,supplement guideline<br>& progress monitoring for achieving the perfect desired shape!
+                            <p>{{ $about_me }}</p>
                         </div>
                     </div>
                     <div class="col-1-4 col-footer-2">
@@ -355,7 +357,7 @@
             </div>
             <div class="copyright">
                 <div class="zerogrid wrapper">
-                    Copyright @ AB Shiddique Fitness - Designed by <a href="https://www.abshiddique.com">AB</a></a>
+                    Copyright @ AB Shiddique Fitness - Designed by <a href="/">AB</a></a>
                     <ul class="quick-link">
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Use</a></li>

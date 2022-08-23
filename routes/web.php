@@ -13,9 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.home');
-});
+// Route::get('/', function () {
+//     return view('frontend.home');
+// });
+Route::get('/', [App\Http\Controllers\FrontendController::class, 'frontend_home']);
 
 Route::get('/program/one-on-one', function () {
     return view('frontend.program.one-on-one');
@@ -47,11 +48,23 @@ Route::get('/online-live-class', function () {
     return view('frontend.online-live-class');
 });
 
-
-
 Auth::routes();
 Route::group(['middleware' => ['auth']], function() {
 
     Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('admin');
+    Route::get('/admin/about', [App\Http\Controllers\HomeController::class, 'about'])->name('admin.about');
+    Route::get('/admin/address', [App\Http\Controllers\HomeController::class, 'address'])->name('admin.address');
+    Route::get('/admin/menu', [App\Http\Controllers\HomeController::class, 'menu'])->name('admin.menu');
+    Route::get('/admin/single_part', [App\Http\Controllers\HomeController::class, 'single_part'])->name('admin.single_part');
+    Route::post('/admin/about/update', [App\Http\Controllers\AboutController::class, 'update'])->name('admin.about.update');
+
+    Route::get('/admin/banner', [App\Http\Controllers\BannerController::class, 'index'])->name('admin.banner');
+    Route::post('/admin/banner/update/{$id}', [App\Http\Controllers\BannerController::class, 'update'])->name('admin.banner.update');
+    Route::get('/admin/banner/create', [App\Http\Controllers\BannerController::class, 'create'])->name('admin.banner.create');
+    Route::post('/admin/banner/store', [App\Http\Controllers\BannerController::class, 'store'])->name('admin.banner.store');
+    Route::get('/admin/banner/show/{id}', [App\Http\Controllers\BannerController::class, 'show'])->name('admin.banner.show');
+    Route::get('/admin/banner/edit/{id}', [App\Http\Controllers\BannerController::class, 'edit'])->name('admin.banner.edit');
+    Route::post('/admin/banner/update/{id}', [App\Http\Controllers\BannerController::class, 'update'])->name('admin.banner.update');
+    Route::delete('/admin/banner/destroy/{id}', [App\Http\Controllers\BannerController::class, 'destroy'])->name('admin.banner.destroy');
 
 });
