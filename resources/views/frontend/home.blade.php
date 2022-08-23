@@ -61,18 +61,20 @@
                 </ul>
             </div>
             <div id="owl-slide" class="owl-carousel">
-                <div class="item">
-                    <img src="images/AB1.jpg" />
-                    <!-- Static Header -->
-                    <div class="header-text hidden-xs">
-                        <div class="col-md-12 text-left">
-                            <h1>START YOUR TRAINING <br>TODAY!</h1>
-                            <p>Professional & Personal Trainer</p>
-                            <a class="button" href="single.html">Let's Start!</a>
-                        </div>
-                    </div><!-- /header-text -->
-                </div>
-                <div class="item">
+                @foreach ($banners as $banner)
+                    <div class="item">
+                        <img src="{{ asset("storage/images/banner/$banner->image") }}" />
+                        <!-- Static Header -->
+                        <div class="header-text hidden-xs">
+                            <div class="col-md-12 text-left">
+                                <h1>{{ $banner->header }}</h1>
+                                <p>{{ $banner->sub_header }}</p>
+                                <a class="button" href="single.html">Let's Start!</a>
+                            </div>
+                        </div><!-- /header-text -->
+                    </div>
+                @endforeach
+                {{-- <div class="item">
                     <img src="images/AB3.jpg"  width=800 height=500 />
                     <!-- Static Header -->
                     <div class="header-text hidden-xs">
@@ -94,7 +96,7 @@
                         </div>
                     </div><!-- /header-text -->
 
-                </div>
+                </div> --}}
             </div>
         </header>
         <!--////////////////////////////////////Container-->
