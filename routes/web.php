@@ -55,7 +55,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/admin/about', [App\Http\Controllers\HomeController::class, 'about'])->name('admin.about');
     Route::get('/admin/address', [App\Http\Controllers\HomeController::class, 'address'])->name('admin.address');
     Route::get('/admin/menu', [App\Http\Controllers\HomeController::class, 'menu'])->name('admin.menu');
-    Route::get('/admin/single_part', [App\Http\Controllers\HomeController::class, 'single_part'])->name('admin.single_part');
+    // Route::get('/admin/post', [App\Http\Controllers\HomeController::class, 'post'])->name('admin.post');
     Route::post('/admin/about/update', [App\Http\Controllers\AboutController::class, 'update'])->name('admin.about.update');
 
     Route::get('/admin/banner', [App\Http\Controllers\BannerController::class, 'index'])->name('admin.banner');
@@ -66,5 +66,12 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/admin/banner/edit/{id}', [App\Http\Controllers\BannerController::class, 'edit'])->name('admin.banner.edit');
     Route::post('/admin/banner/update/{id}', [App\Http\Controllers\BannerController::class, 'update'])->name('admin.banner.update');
     Route::delete('/admin/banner/destroy/{id}', [App\Http\Controllers\BannerController::class, 'destroy'])->name('admin.banner.destroy');
+
+    Route::resource('/admin/post', App\Http\Controllers\PostController::class);
+    Route::resource('/admin/blog', App\Http\Controllers\BlogController::class);
+    Route::get('/admin/review/list', [App\Http\Controllers\ReviewController::class, 'list'])->name('review.list');
+    Route::delete('/admin/review/destroy/{id}', [App\Http\Controllers\ReviewController::class, 'destroy'])->name('review.destroy');
+    Route::resource('/admin/product', App\Http\Controllers\ProductController::class);
+    Route::resource('/admin/course', App\Http\Controllers\CourseController::class);
 
 });

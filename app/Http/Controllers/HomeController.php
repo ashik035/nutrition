@@ -54,8 +54,8 @@ class HomeController extends Controller
         return view('admin.menu');
     }
 
-    public function single_part()
+    public function post()
     {
-        return view('admin.single_part');
+        return view('admin.post');
     }
 }
