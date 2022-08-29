@@ -31,9 +31,11 @@
 }
 
 .admin-footer {
-	position:fixed;
+	background: #233242;
     bottom:0;
-	left:43%;
+	width: 100%;
+	color: #ffffff;
+	position: absolute;
 }
 
 .page-wrapper {
@@ -47,4 +49,13 @@
 
 .admin-about-textarea {
 	min-height: 200px !important;
+}
+
+.btn{
+	color: #ffffff;
+}
+
+.btn-primary:hover {
+	color: #233242 !important;
+	background: #137eff;
 }
