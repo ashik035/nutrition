@@ -4,7 +4,7 @@
     <div class="page-breadcrumb">
         <div class="row">
             <div class="col-5 align-self-center">
-                <h4 class="page-title">Banner</h4>
+                <h4 class="page-title">Blog</h4>
             </div>
             <div class="col-7 align-self-center">
                 <div class="d-flex align-items-center justify-content-end">
@@ -13,7 +13,7 @@
                             <li class="breadcrumb-item">
                                 <a href="#">Home</a>
                             </li>
-                            <li class="breadcrumb-item active" aria-current="page">Banner</li>
+                            <li class="breadcrumb-item active" aria-current="page">Blog</li>
                         </ol>
                     </nav>
                 </div>
@@ -33,10 +33,10 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>Banner Lists</h2>
+                    <h2>Blog Lists</h2>
                 </div>
                 <div class="pull-right pb-2">
-                    <a class="btn btn-success" href="{{ route('admin.banner.create') }}"> Create New banner</a>
+                    <a class="btn btn-success" href="{{ route('blog.create') }}"> Create New Blog</a>
                 </div>
             </div>
         </div>
@@ -50,21 +50,21 @@
         <table class="table table-bordered">
             <tr>
                 <th>No</th>
-                <th>Header</th>
-                <th>Sub Header</th>
+                <th>Title</th>
+                <th>Details</th>
                 <th>Image</th>
                 <th width="280px">Action</th>
             </tr>
             @foreach ($blogs as $blog)
             <tr>
                 <td>{{ ++$i }}</td>
-                <td>{{ $blog->header }}</td>
-                <td>{{ $blog->sub_header }}</td>
-                <td><img src={{ asset("storage/images/banner/$blog->image") }} height="100px" width="100px" alt="banner"></td>
+                <td>{{ $blog->title }}</td>
+                <td>{{ $blog->details }}</td>
+                <td><img src={{ asset("storage/images/blog/$blog->image") }} height="100px" width="100px" alt="blog"></td>
                 <td>
-                    <form action="{{ route('admin.banner.destroy',$blog->id) }}" method="POST">
-                        <a class="btn btn-primary" href="{{ route('admin.banner.edit',$blog->id) }}">Edit</a>
-                        <a class="btn btn-info" href="{{ route('admin.banner.show',$blog->id) }}">Show</a>
+                    <form action="{{ route('blog.destroy',$blog->id) }}" method="POST">
+                        <a class="btn btn-primary" href="{{ route('blog.edit',$blog->id) }}">Edit</a>
+                        <a class="btn btn-info" href="{{ route('blog.show',$blog->id) }}">Show</a>
                         @csrf
                         @method('DELETE')
 

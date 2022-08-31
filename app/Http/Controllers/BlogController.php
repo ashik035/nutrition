@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Banner;
 use App\Models\Blog;
 use App\Http\Requests\StoreBannerRequest;
 use App\Http\Requests\UpdateBannerRequest;
@@ -30,15 +29,15 @@ class BlogController extends Controller
 
     public function show($id)
     {
-        $banner = Banner::where('id' , $id)->get()->first();
-        return view('admin.banner.show',compact('banner'));
+        $blog = Blog::where('id' , $id)->get()->first();
+        return view('admin.blog.show',compact('blog'));
     }
 
 
     public function edit($id)
     {
-        $banner = Banner::find($id);
-        return view('admin.banner.edit',compact('banner'));
+        $blog = Blog::find($id);
+        return view('admin.blog.edit',compact('blog'));
     }
 
     /**
@@ -54,9 +53,9 @@ class BlogController extends Controller
 
         if ($request->hasFile('image')) {
             $request->validate([
-                'header' => 'required|max:255',
-                'sub_header' => 'required|max:255',
-                'image' => 'mimes:jpeg,jpg,png,gif,svg|required|max:10000',
+                'title' => 'required|max:255|min:5',
+                'details' => 'required|max:200|min:20',
+                'image' => 'mimes:jpeg,jpg,png,gif,svg|required|max:10000'
             ]);
 
             $image      = $request->file('image');
@@ -66,50 +65,50 @@ class BlogController extends Controller
             $img = Image::make($image->getRealPath())->resize(1200, 600, function ($aspect) {
                 $aspect->aspectRatio();
             })->encode($ext);
-            $filePath = 'images/banner'.'/';
+            $filePath = 'images/blog'.'/';
 
             Storage::disk('public')->put($filePath . $fileName, (string) $img);
         } else {
             $request->validate([
-                'header' => 'required|max:255',
-                'sub_header' => 'required|max:255',
+                'title' => 'required|max:255|min:5',
+                'details' => 'required|max:200|min:20'
             ]);
             $fileName = $request['current_image'];
         }
 
         $data = [];
-        $data['id'] = $request['id'];
-        $data['header'] = $request['header'];
-        $data['sub_header'] = $request['sub_header'];
+        $data['id'] = $id;
+        $data['title'] = $request['title'];
+        $data['details'] = $request['details'];
         $data['image'] = $fileName;
 
         // dd($data);
-        Banner::where('id' , $data['id'])
+        Blog::where('id' , $data['id'])
                 ->update($data);
 
-        return redirect()->route('admin.banner')
-                        ->with('success','banner updated successfully');
+        return redirect()->route('blog.index')
+                        ->with('success','Blog updated successfully');
     }
 
     public function destroy($id)
     {
-        Banner::find($id)->delete();
+        Blog::find($id)->delete();
 
-        return redirect()->route('admin.banner')
-                        ->with('success','banner deleted successfully');
+        return redirect()->route('blog.index')
+                        ->with('success','Blog deleted successfully');
     }
 
     public function create()
     {
-        return view('admin.banner.create');
+        return view('admin.blog.create');
     }
 
     public function store(Request $request)
     {
         // dd($request);
         $request->validate([
-            'header' => 'required|max:255',
-            'sub_header' => 'required|max:255',
+            'title' => 'required|max:255|min:5',
+            'details' => 'required|max:2000|min:20',
             'image' => 'mimes:jpeg,jpg,png,gif,svg|required|max:10000',
         ]);
 
@@ -123,19 +122,19 @@ class BlogController extends Controller
             $img = Image::make($image->getRealPath())->resize(1200, 600, function ($aspect) {
                 $aspect->aspectRatio();
             })->encode($ext);
-            $filePath = 'images/banner'.'/';
+            $filePath = 'images/blog'.'/';
 
             Storage::disk('public')->put($filePath . $fileName, (string) $img);
         }
 
         $data = [];
-        $data['header'] = $request['header'];
-        $data['sub_header'] = $request['sub_header'];
+        $data['title'] = $request['title'];
+        $data['details'] = $request['details'];
         $data['image'] = $fileName;
 
-        Banner::create($data);
+        Blog::create($data);
 
-        return redirect()->route('admin.banner')
-                        ->with('success','banner created successfully.');
+        return redirect()->route('blog.index')
+                        ->with('success','Blog created successfully.');
     }
 }

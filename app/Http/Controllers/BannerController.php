@@ -77,7 +77,7 @@ class BannerController extends Controller
         }
 
         $data = [];
-        $data['id'] = $request['id'];
+        $data['id'] = $id;
         $data['header'] = $request['header'];
         $data['sub_header'] = $request['sub_header'];
         $data['image'] = $fileName;
@@ -86,7 +86,7 @@ class BannerController extends Controller
         Banner::where('id' , $data['id'])
                 ->update($data);
 
-        return redirect()->route('admin.banner')
+        return redirect()->route('banner.index')
                         ->with('success','banner updated successfully');
     }
 
@@ -94,7 +94,7 @@ class BannerController extends Controller
     {
         Banner::find($id)->delete();
 
-        return redirect()->route('admin.banner')
+        return redirect()->route('banner.index')
                         ->with('success','banner deleted successfully');
     }
 
@@ -134,7 +134,7 @@ class BannerController extends Controller
 
         Banner::create($data);
 
-        return redirect()->route('admin.banner')
+        return redirect()->route('banner.index')
                         ->with('success','banner created successfully.');
     }
 }

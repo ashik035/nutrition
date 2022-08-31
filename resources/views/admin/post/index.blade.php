@@ -4,7 +4,7 @@
     <div class="page-breadcrumb">
         <div class="row">
             <div class="col-5 align-self-center">
-                <h4 class="page-title">Banner</h4>
+                <h4 class="page-title">Post</h4>
             </div>
             <div class="col-7 align-self-center">
                 <div class="d-flex align-items-center justify-content-end">
@@ -13,7 +13,7 @@
                             <li class="breadcrumb-item">
                                 <a href="#">Home</a>
                             </li>
-                            <li class="breadcrumb-item active" aria-current="page">Banner</li>
+                            <li class="breadcrumb-item active" aria-current="page">Post</li>
                         </ol>
                     </nav>
                 </div>
@@ -33,10 +33,10 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>Banner Lists</h2>
+                    <h2>Post Lists</h2>
                 </div>
                 <div class="pull-right pb-2">
-                    <a class="btn btn-success" href="{{ route('admin.banner.create') }}"> Create New banner</a>
+                    <a class="btn btn-success" href="{{ route('post.create') }}"> Create New Post</a>
                 </div>
             </div>
         </div>
@@ -50,21 +50,23 @@
         <table class="table table-bordered">
             <tr>
                 <th>No</th>
-                <th>Header</th>
-                <th>Sub Header</th>
-                <th>Image</th>
+                <th>Title</th>
+                <th>Type</th>
+                <th>Details</th>
+                <th>Media</th>
                 <th width="280px">Action</th>
             </tr>
-            @foreach ($banners as $banner)
+            @foreach ($posts as $post)
             <tr>
                 <td>{{ ++$i }}</td>
-                <td>{{ $banner->header }}</td>
-                <td>{{ $banner->sub_header }}</td>
-                <td><img src={{ asset("storage/images/banner/$banner->image") }} height="100px" width="100px" alt="banner"></td>
+                <td>{{ $post->title }}</td>
+                <td>{{ $post->type }}</td>
+                <td>{{ $post->details }}</td>
+                <td><img src={{ asset("storage/images/post/$post->media") }} height="100px" width="100px" alt="post"></td>
                 <td>
-                    <form action="{{ route('admin.banner.destroy',$banner->id) }}" method="POST">
-                        <a class="btn btn-primary" href="{{ route('admin.banner.edit',$banner->id) }}">Edit</a>
-                        <a class="btn btn-info" href="{{ route('admin.banner.show',$banner->id) }}">Show</a>
+                    <form action="{{ route('post.destroy',$post->id) }}" method="POST">
+                        <a class="btn btn-primary" href="{{ route('post.edit',$post->id) }}">Edit</a>
+                        <a class="btn btn-info" href="{{ route('post.show',$post->id) }}">Show</a>
                         @csrf
                         @method('DELETE')
 
@@ -77,7 +79,7 @@
         <div class="row">
             <div class="d-flex mb-5">
                 <div class="mx-auto">
-                    {{$banners->links("pagination::bootstrap-4")}}
+                    {{$posts->links("pagination::bootstrap-4")}}
                 </div>
             </div>
         </div>

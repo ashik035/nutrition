@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Banner;
 use App\Models\Post;
 use App\Http\Requests\StoreBannerRequest;
 use App\Http\Requests\UpdateBannerRequest;
@@ -21,24 +20,24 @@ class PostController extends Controller
 
     public function index()
     {
-        $banners = Banner::where('deleted_at', '=', Null)->orderBy('id', 'ASC')->latest()->paginate(5);
+        $posts = Post::where('deleted_at', '=', Null)->orderBy('id', 'ASC')->latest()->paginate(5);
 
-        return view('admin.post.index',compact('banners'))
+        return view('admin.post.index',compact('posts'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
         // return view('admin.banner.index');
     }
 
     public function show($id)
     {
-        $banner = Banner::where('id' , $id)->get()->first();
-        return view('admin.banner.show',compact('banner'));
+        $post = Post::where('id' , $id)->get()->first();
+        return view('admin.post.show',compact('post'));
     }
 
 
     public function edit($id)
     {
-        $banner = Banner::find($id);
-        return view('admin.banner.edit',compact('banner'));
+        $post = Post::find($id);
+        return view('admin.post.edit',compact('post'));
     }
 
     /**
@@ -83,25 +82,24 @@ class PostController extends Controller
         $data['sub_header'] = $request['sub_header'];
         $data['image'] = $fileName;
 
-        // dd($data);
-        Banner::where('id' , $data['id'])
+        Post::where('id' , $data['id'])
                 ->update($data);
 
-        return redirect()->route('admin.banner')
-                        ->with('success','banner updated successfully');
+        return redirect()->route('post.index')
+                        ->with('success','Post updated successfully');
     }
 
     public function destroy($id)
     {
-        Banner::find($id)->delete();
+        Post::find($id)->delete();
 
-        return redirect()->route('admin.banner')
-                        ->with('success','banner deleted successfully');
+        return redirect()->route('post.index')
+                        ->with('success','Post deleted successfully');
     }
 
     public function create()
     {
-        return view('admin.banner.create');
+        return view('admin.post.create');
     }
 
     public function store(Request $request)
@@ -133,9 +131,9 @@ class PostController extends Controller
         $data['sub_header'] = $request['sub_header'];
         $data['image'] = $fileName;
 
-        Banner::create($data);
+        Post::create($data);
 
-        return redirect()->route('admin.banner')
-                        ->with('success','banner created successfully.');
+        return redirect()->route('post.index')
+                        ->with('success','Post created successfully.');
     }
 }
