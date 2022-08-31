@@ -147,21 +147,21 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href={{route('admin.banner') }}
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href={{route('banner.index') }}
                                 aria-expanded="false">
                                 <i class="mdi mdi-av-timer"></i>
                                 <span class="hide-menu">Banner</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href={{ route('post.index') }}
                                 aria-expanded="false">
                                 <i class="mdi mdi-face"></i>
                                 <span class="hide-menu">Posts</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href={{ route('admin.banner') }}
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href={{ route('banner.index') }}
                                 aria-expanded="false">
                                 <i class="mdi mdi-account-network"></i>
                                 <span class="hide-menu">Course</span>

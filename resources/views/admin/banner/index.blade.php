@@ -36,7 +36,7 @@
                     <h2>Banner Lists</h2>
                 </div>
                 <div class="pull-right pb-2">
-                    <a class="btn btn-success" href="{{ route('admin.banner.create') }}"> Create New banner</a>
+                    <a class="btn btn-success" href="{{ route('banner.create') }}"> Create New banner</a>
                 </div>
             </div>
         </div>
@@ -62,9 +62,9 @@
                 <td>{{ $banner->sub_header }}</td>
                 <td><img src={{ asset("storage/images/banner/$banner->image") }} height="100px" width="100px" alt="banner"></td>
                 <td>
-                    <form action="{{ route('admin.banner.destroy',$banner->id) }}" method="POST">
-                        <a class="btn btn-primary" href="{{ route('admin.banner.edit',$banner->id) }}">Edit</a>
-                        <a class="btn btn-info" href="{{ route('admin.banner.show',$banner->id) }}">Show</a>
+                    <form action="{{ route('banner.destroy',$banner->id) }}" method="POST">
+                        <a class="btn btn-primary" href="{{ route('banner.edit',$banner->id) }}">Edit</a>
+                        <a class="btn btn-info" href="{{ route('banner.show',$banner->id) }}">Show</a>
                         @csrf
                         @method('DELETE')
 

@@ -9,16 +9,6 @@
     </div>
 </div>
 
-@if ($errors->any())
-    <div class="alert alert-danger col-xs-8 offset-md-2 offset-xs-2 offset-sm-2 col-sm-8 col-md-8">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
-
 <form action="{{ route('admin.banner.store') }}" method="post" enctype="multipart/form-data">
     @csrf
 
@@ -27,12 +17,22 @@
             <div class="form-group">
                 <strong>Banner Header:</strong>
                 <textarea class="form-control" style="height:150px" name="header" placeholder="Add header"></textarea>
+                @if ($errors->has('header'))
+                    <span role="alert">
+                        <strong class="text-danger">{{ $errors->first('header') }}</strong>
+                    </span>
+                @endif
             </div>
         </div>
         <div class="col-xs-8 col-sm-8 col-md-8 offset-md-2 offset-xs-2 offset-sm-2">
             <div class="form-group">
                 <strong>Sub Header:</strong>
                 <textarea class="form-control" style="height:150px" name="sub_header" placeholder="Add sub header"></textarea>
+                @if ($errors->has('sub_header'))
+                    <span role="alert">
+                        <strong class="text-danger">{{ $errors->first('sub_header') }}</strong>
+                    </span>
+                @endif
             </div>
         </div>
         <div class="col-xs-8 col-sm-8 col-md-8 offset-md-2 offset-xs-2 offset-sm-2 mb-3">
@@ -40,6 +40,11 @@
                 <strong>Image:</strong>
                 <input type="file" name="image">
             </div>
+            @if ($errors->has('image'))
+                <span role="alert">
+                    <strong class="text-danger">{{ $errors->first('image') }}</strong>
+                </span>
+            @endif
         </div>
         <div class="col-xs-8 col-sm-8 col-md-8 text-center offset-md-2 offset-xs-2 offset-sm-2">
                 <button type="submit" class="btn btn-primary">Submit</button>
