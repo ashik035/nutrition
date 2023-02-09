@@ -263,7 +263,7 @@ hr.line-2 {
 }
 
 .widget-title:before {
-  background-color: rgba(64, 54, 182, 0.9);
+  background-color: rgb(199, 218, 63);
   content: "";
   height: 1em;
   left: 0;
@@ -297,7 +297,7 @@ header {
 }
 
 header .top-header {
-  background: #292A2C;
+  background: #000;
   color: #fff;
 }
 
@@ -345,7 +345,6 @@ header .top-header i.fa {
   background: rgba(0, 0, 0, 0.5);
   display: inline-block;
   padding: 30px;
-  border-left: 5px solid rgb(68, 55, 211);
   text-align: left;
 }
 
@@ -691,8 +690,8 @@ footer .col-footer-4 img {
 /* -------------------------------------Button--------------------------------- */
 /* ---------------------------------------------------------------------------- */
 a.button {
-  background-color: rgba(64, 54, 182, 0.9);
-  border: 1px solid rgba(64, 54, 182, 0.9);
+  background-color: rgb(199, 218, 63);
+  border: 1px solid rgb(199, 218, 63);
   padding: 7px 18px;
   color: #fff;
   text-decoration: none;
@@ -704,8 +703,8 @@ a.button {
 
 a.button:hover {
   background-color: #fff;
-  border: 1px solid rgba(64, 54, 182, 0.9);
-  color: rgba(64, 54, 182, 0.9);
+  border: 1px solid rgb(199, 218, 63);
+  color: rgb(199, 218, 63);
 }
 
 /* ---------------------------------------------------------------------------- */
@@ -805,7 +804,7 @@ a.button:hover {
 }
 
 .box-entry:hover {
-  border-bottom: 4px solid rgba(64, 54, 182, 0.9);
+  border-bottom: 4px solid rgb(199, 218, 63);
 }
 
 @media only screen and (max-width: 767px) {

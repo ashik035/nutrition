@@ -76,7 +76,7 @@ hr.line-2{background: #333;max-width: 40px;height: 4px;}
 
 .widget-title{position: relative;letter-spacing: 1px;font-weight: bold;text-transform: uppercase;line-height: 1.38;margin-bottom: 20px;font-size: 14px;color: #eee;padding-left: 13px;}
 
-.widget-title:before {background-color: rgba(64, 54, 182, 0.9);content: "";height: 1em;left: 0;margin-top: -0.5em;position: absolute;top: 50%;width: 3px;}
+.widget-title:before {background-color: rgb(199,218,63);content: "";height: 1em;left: 0;margin-top: -0.5em;position: absolute;top: 50%;width: 3px;}
 /* ---------------------------------------------------------------------------- */
 /* ------------------------------------Html-Body------------------------------- */
 /* ---------------------------------------------------------------------------- */
@@ -88,7 +88,7 @@ body .wrap-body{}
 /* -------------------------------------Header--------------------------------- */
 /* ---------------------------------------------------------------------------- */
 header{text-align: center;background: #fff;}
-header .top-header{background: #292A2C;color: #fff;}
+header .top-header{background: #000;color: #fff;}
 header .top-header i.fa{margin: 5px 2px 0;}
 
  .logo {color: #333;padding: 20px 0 30px;}
@@ -101,7 +101,7 @@ header .top-header i.fa{margin: 5px 2px 0;}
 }
 
 /* Carousel Header Styles */
-.header-text {position: absolute;top: 25%;left: 10%;right: auto;color: #555; background: rgba(0, 0, 0, .5);display: inline-block;padding: 30px;border-left: 5px solid rgb(68, 55, 211);text-align: left;}
+.header-text {position: absolute;top: 25%;left: 10%;right: auto;color: #555; background: rgba(0, 0, 0, .5);display: inline-block;padding: 30px; text-align: left;}
 .header-text h1{margin: 0;font-family: "Oswald",sans-serif;text-transform: uppercase;font-weight: 700;color: #fff;font-size: 44px;letter-spacing: 2px;}
 .header-text p{font-size: 24px;color: #ccc;font-family: 'Archivo Narrow', sans-serif;text-shadow: 1px 1px #222;}
 .header-text .btn-primary{border:none;padding: 12px 24px;margin-right: 7px;border-radius: 0;font-size: 18px;}
@@ -216,8 +216,8 @@ footer .col-footer-4 img{margin-bottom: 20px;}
 /* ---------------------------------------------------------------------------- */
 /* -------------------------------------Button--------------------------------- */
 /* ---------------------------------------------------------------------------- */
-a.button{background-color: rgba(64, 54, 182, 0.9); border: 1px solid rgba(64, 54, 182, 0.9); padding: 7px 18px;color: #fff;text-decoration: none; margin: 20px auto 0;display:inline-block;font-size: 15px;border-radius: 4px;}
-a.button:hover{background-color: #fff; border: 1px solid rgba(64, 54, 182, 0.9); color:rgba(64, 54, 182, 0.9);}
+a.button{background-color: rgb(199,218,63); border: 1px solid rgb(199,218,63); padding: 7px 18px;color: #fff;text-decoration: none; margin: 20px auto 0;display:inline-block;font-size: 15px;border-radius: 4px;}
+a.button:hover{background-color: #fff; border: 1px solid rgb(199,218,63); color:rgb(199,218,63);}
 
 /* ---------------------------------------------------------------------------- */
 /* ----------------------------------Carousel---------------------------------- */
@@ -242,7 +242,7 @@ a.button:hover{background-color: #fff; border: 1px solid rgba(64, 54, 182, 0.9);
 .box-entry .entry-meta i.fa{margin: 3px 2px 0;}
 .box-entry .entry-des {padding: 0 0 15px;border-bottom: 1px solid #ddd;}
 .box-entry .entry-des h3{margin: 0 0 20px;font-size: 19px;font-weight: 700;text-transform: uppercase;line-height: 1.4;}
-.box-entry:hover{border-bottom: 4px solid rgba(64, 54, 182, 0.9);}
+.box-entry:hover{border-bottom: 4px solid rgb(199,218,63);}
 @media only screen and (max-width: 767px) {.box-entry{text-align: center;}}
 
 /* ---------------------------------------------------------------------------- */

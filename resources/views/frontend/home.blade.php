@@ -30,7 +30,7 @@
                                 <h2>What'll You Get</h2>
                             </div>
                             <div class="box-content">
-                                <p>Professional & personal fitness trainer,to assist clients in all fitness levels to get into shape & achieve goal.  <br>I offer clients with customized meal plan,workout program,supplement guideline<br>& progress monitoring for achieving the perfect desired shape!<p>
+                                <p>Nutritive components of food are those elements that provide a considerable quantity of energy to the system, such as protein, carbohydrates, and fats, all of which are essential to the body. Emphasizes fruits, vegetables, whole grains, and fat-free or low-fat milk and milk products. Includes a variety of protein foods such as seafood, lean meats and poultry, eggs, legumes (beans and peas), soy products, nuts, and seeds. Is low in added sugars, sodium, saturated fats, trans fats, and cholesterol. <br><br>This site is offers credible information to help you make healthful eating choices.<p>
                     </div>
                 </section>
                 <!-----------------content-box-main-------------------->

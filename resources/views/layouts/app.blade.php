@@ -6,7 +6,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-	<title>AB Shiddique- Fitness Trainer</title>
+	<title>Soufia's Nutrition </title>
 	<meta name="description" content="AB Shiddique (Fitness Trainer) ">
 	<meta name="author" content="AB Shiddique">
 
@@ -63,23 +63,23 @@
                         <div class="row">
                             <div class="col-1-3">
                                 <div class="wrap-col">
-                                    <span><i class="fa fa-map-marker"></i> <strong>Sector-3, Uttara</strong>, Dhaka-1230, Bangladesh</span>
+                                    {{-- <a href="/"><img class="logo_img" src="{{ asset("storage/images/logo/logo-02.png") }}" alt="logo"></a> --}}
                                 </div>
                             </div>
                             <div class="col-1-3">
                                 <div class="wrap-col">
-                                    <span><i class="fa fa-phone"></i> 01740096478</span>
+                                    <a href="/"><img class="logo_img" src="{{ asset("storage/images/logo/sou.png") }}" alt="logo"></a>
                                 </div>
                             </div>
                             <div class="col-1-3">
                                 <div class="wrap-col">
-                                    <span><i class="fa fa-clock-o"></i> Sat-Thu 8:00am-02:00pm, Fri 8:00am-10:00pm</span>
+                                    {{-- <a href="/"><img class="logo_img" src="{{ asset("storage/images/logo/logo-02.png") }}" alt="logo"></a> --}}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class=" ">
+                {{-- <div class=" ">
                     <div class="zerogrid">
                         <div class="row">
                             <div class="col-1-3">
@@ -98,10 +98,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <div id="cssmenu" class="t-left">
                     <ul>
-                        <li class="active has-sub"><a href="#"><span>Program</span></a>
+                        <li class="active has-sub"><a href="#"><span>Offline Appointment</span></a>
                             <ul>
                                 <li class="has-sub"><a href="/program/one-on-one"><span>One-on-One Training</span></a></li>
                                 <li class="has-sub"><a href="/program/online-fitness-coaching-for-general"><span>Online Fitness Coaching for General</span></a></li>
@@ -112,23 +112,23 @@
                                 <li class="has-sub"><a href="/program/customize-workout-diet"><span>Customize Workout Diet</span></a></li>
                             </ul>
                         </li>
-                        <li class="has-sub"><a href="#"><span>Online Live Group Class</span></a>
+                        <li class="has-sub"><a href="#"><span>Online Appointment</span></a>
                             <ul>
                                 <li class="has-sub"><a href="/program/three_days_in_a_week"><span>3 Days In a Week</span></a>
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="#"><span>Shop</span></a>
+                        <li><a href="#"><span>Order Products</span></a>
                             <ul>
                                 <li><a href="/shop/shop-all"><span>Shop All</span></a></li>
                                 <li><a href="/shop/accessories"><span>Accessories</span></a></li>
                                 <li class="last"><a href="/shop/apparel"><span>Apparel</span></a></li>
                             </ul>
                         </li>
-                        <li><a href="/review"><span>Reviews</span></a></li>
-                        <li><a href="/blog"><span>Blog</span></a></li>
-                        <li><a href="#footer"><span>About</span></a></li>
-                        <li class="last"><a href="/contact"><span>Contact</span></a></li>
+                        <li><a href="/review"><span>Customer Feedback</span></a></li>
+                        <li><a href="/blog"><span>Stories</span></a></li>
+                        <li><a href="#footer"><span>Explore Us</span></a></li>
+                        <li class="last"><a href="/contact"><span>Find Us</span></a></li>
                     </ul>
                 </div>
             </header>
@@ -142,53 +142,37 @@
                 <div class="row">
                     <div class="col-1-4 col-footer-1">
                         <div class="wrap-col">
-                            <h3 class="widget-title">About Me</h3>
-                            <p>Professional & personal fitness trainer,to assist clients in all fitness levels to get into shape & achieve goal.
-                                I offer clients with customized meal plan,workout program,supplement guideline
-                                & progress monitoring for achieving the perfect desired shape!
+                            <h3 class="widget-title">About Us</h3>
+                            <p> It serves as a gateway to reliable information on nutrition, healthy eating, physical activity, and food safety for consumers. The site is updated on an ongoing basis by a staff of Registered Dietitians at the Food
                             </p>
                         </div>
                     </div>
                     <div class="col-1-4 col-footer-2">
                         <div class="wrap-col">
-                            <h3 class="widget-title">Recent Post</h3>
+                            <h3 class="widget-title">Latest Post</h3>
                             <ul>
-                                <li><a href="#">BEST WORKOUT VIDEOS</a></li>
-                                <li><a href="#">5 WAYS TO BE FIT</a></li>
-                                <li><a href="#">HOW TO START</a></li>
-                                <li><a href="#">SUPPLEMENTS</a></li>
+                                <li><a href="#">Follow the rules</a></li>
+                                <li><a href="#">Exersise More</a></li>
+                                <li><a href="#">Balance your life</a></li>
+                                <li><a href="#">We are here for you</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-1-4 col-footer-3">
                         <div class="wrap-col">
-                            <h3 class="widget-title">Tag Cloud</h3>
-                            <a href="#">personal trainer</a>
-                            <a href="#">workout</a>
-                            <a href="#">certified trainer</a>
-                            <a href="#">countries</a>
-                            <a href="#">healthy</a>
-                            <a href="#">food</a>
-                            <a href="#">home</a>
-                            <a href="#">traing</a>
-                            <a href="#">photo</a>
-                            <a href="#">fit</a>
-                            <a href="#">law</a>
-                            <a href="#">fitness</a>
-                            <a href="#">skate</a>
-                            <a href="#">scholl</a>
-                            <a href="#">video</a>
-                            <a href="#">travel</a>
-                            <a href="#">images</a>
-                            <a href="#">gym</a>
+                            <h3 class="widget-title">Follow Tags</h3>
+                            <a href="#">Balance Diet</a>
+                            <a href="#">Eat Less</a>
+                            <a href="#">Get List</a>
+                            <a href="#">Join Today</a>
                         </div>
                     </div>
                     <div class="col-1-4 col-footer-4">
                         <div class="wrap-col">
-                            <h3 class="widget-title">Where to Find Me</h3>
+                            <h3 class="widget-title">Location</h3>
                             <div class="row">
                                 <address>
-                                    <strong>sector 3, Uttara,</strong>
+                                    <strong>Basundhora,</strong>
                                     <br>
                                     Dhaka
                                 </p>
@@ -199,7 +183,7 @@
             </div>
             <div class="copyright">
                 <div class="zerogrid wrapper">
-                    Copyright @ AB Shiddique Fitness - Designed by <a href="/">AB</a></a>
+                    Copyright @ Soufia nutrition center - Designed by <a href="/">Soufia</a></a>
                     <ul class="quick-link">
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Use</a></li>
